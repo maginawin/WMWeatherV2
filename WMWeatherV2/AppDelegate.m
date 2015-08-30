@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WMWeatherManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    [WMWeatherManager sharedInstance];
+    
+//    [[WMWeatherManager sharedInstance] requestCityWithName:@"guangzhou"];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        WMWeatherCity *city = [WMWeatherManager sharedInstance].citys.firstObject;
+//        [[WMWeatherManager sharedInstance] requestWeatherInfoWithCity:city];
+//        NSLog(@"Weather %@", [WMWeatherManager sharedInstance].weatherInfo.information);
+//    });
+    
     return YES;
 }
 

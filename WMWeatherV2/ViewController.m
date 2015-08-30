@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "WMWeatherTVC.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) UIButton *weatherButton;
 
 @end
 
@@ -16,12 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    // Weather btn
+    _weatherButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 80, 120, 44)];
+    [_weatherButton setTitle:@"Weather" forState:UIControlStateNormal];
+    [_weatherButton addTarget:self action:@selector(weatherClick) forControlEvents:UIControlEventTouchUpInside];
+    [_weatherButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    
+    [self.view addSubview:_weatherButton];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)weatherClick {
+    WMWeatherTVC *weatherTVC = [[WMWeatherTVC alloc] initWithNibName:@"WMWeatherTVC" bundle:nil];
+    
+    [self.navigationController pushViewController:weatherTVC animated:YES];
 }
 
 @end

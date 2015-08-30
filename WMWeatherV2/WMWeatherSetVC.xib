@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WMWeatherSetVC">
+            <connections>
+                <outlet property="mSearchBar" destination="E32-ba-bAx" id="LD9-MC-kMr"/>
+                <outlet property="mTableView" destination="mqN-yi-Rn2" id="zBY-tK-2TM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="INPUT CITY NAME" translatesAutoresizingMaskIntoConstraints="NO" id="E32-ba-bAx">
+                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="mli-vT-HGc"/>
+                    </constraints>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mqN-yi-Rn2">
+                    <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="E32-ba-bAx" secondAttribute="trailing" id="S0J-NM-bmi"/>
+                <constraint firstItem="mqN-yi-Rn2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="W7t-Tk-Kaa"/>
+                <constraint firstAttribute="bottom" secondItem="mqN-yi-Rn2" secondAttribute="bottom" id="ZtY-72-Y1u"/>
+                <constraint firstItem="mqN-yi-Rn2" firstAttribute="top" secondItem="E32-ba-bAx" secondAttribute="bottom" id="ips-rE-LxY"/>
+                <constraint firstAttribute="trailing" secondItem="mqN-yi-Rn2" secondAttribute="trailing" id="lnD-xm-I1Y"/>
+                <constraint firstItem="E32-ba-bAx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nyF-Jd-u1I"/>
+                <constraint firstItem="E32-ba-bAx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="zPN-Rv-c4g"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
